@@ -25,13 +25,15 @@ function getComputerChoice(){
 } 
 
 function playRound(playerSelection, computerSelection){
-    if(playerSelection==computerSelection){
-        return "You Lose! Paper beats Rock";
+    if((computerSelection=="rock" && playerSelection=="scissors") || (computerSelection=="rock" && playerSelection=="scissors") || (computerSelection=="rock" && playerSelection=="scissors")){
+        return "You Lose! $(computerSelection) beats $(playerSelection)";
     }else return "biscuts"
 }
 
-game => () {
+game = () => {
     for (let i=0; i<5; i++){
+        console.log("you are in game $(i) out of 5");
+        playRound();
 
     }
 }
