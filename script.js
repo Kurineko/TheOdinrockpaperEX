@@ -25,9 +25,12 @@ function getComputerChoice(){
 } 
 
 function playRound(playerSelection, computerSelection){
-    if((computerSelection=="rock" && playerSelection=="scissors") || (computerSelection=="rock" && playerSelection=="scissors") || (computerSelection=="rock" && playerSelection=="scissors")){
-        return "You Lose! $(computerSelection) beats $(playerSelection)";
-    }else return "biscuts"
+    if((computerSelection=="rock" && playerSelection=="scissors") || (computerSelection=="paper" && playerSelection=="rock") || (computerSelection=="scissors" && playerSelection=="paper")){
+        return "You Lose! " + computerSelection + " beats " + playerSelection;} 
+        
+    else if (playerSelection==computerSelection) return "Tie!";
+    
+    else return "You Lose! " + playerSelection + " beats " + computerSelection;
 }
 
 game = () => {
