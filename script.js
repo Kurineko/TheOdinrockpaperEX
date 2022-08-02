@@ -43,21 +43,22 @@ function playRound(playerSelection, computerSelection){
 function player_Selection(){
     let crack = prompt("Enter option here").charAt(0);
     switch(true){
-        case crack==("R"||"r"):
+        case crack.toUpperCase()=="R":
             return "rock";
             break;
             
-        case crack==("S"||"s"):
+        case crack.toUpperCase()=="S":
             return "scissors";
             break;
 
-        case crack==("P"||"p"):
+        case crack.toUpperCase()=="P":
             return "paper";
             break;
 
-        default:
-            alert("Unvalid selection, choose rock paper or scissor");
-            break;
+        /*default:
+            alert("Unvalid selection, choose rock paper or scissors");
+            return player_Selection();
+            break;*/
     }
 }
 
