@@ -25,22 +25,36 @@ function getComputerChoice(){
 } 
 
 function playRound(playerSelection, computerSelection){
-    if((computerSelection=="rock" && playerSelection=="scissors") || (computerSelection=="paper" && playerSelection=="rock") || (computerSelection=="scissors" && playerSelection=="paper")){
-        return "You Lose! " + computerSelection + " beats " + playerSelection;} 
+    if((computerSelection=="rock" && playerSelection=="scissors") || 
+        (computerSelection=="paper" && playerSelection=="rock") || 
+        (computerSelection=="scissors" && playerSelection=="paper")){
+            losses=losses+1;
+            return "You Lose! " + computerSelection + " beats " + playerSelection;} 
         
-    else if (playerSelection==computerSelection) return "Tie!";
+    else if (playerSelection==computerSelection) 
+            {ties=ties+1;
+                return "Tie!";}
     
-    else return "You Lose! " + playerSelection + " beats " + computerSelection;
+    else 
+            {wins=wins+1;
+                return "You Win! " + playerSelection + " beats " + computerSelection;}
 }
+
 
 game = () => {
     for (let i=0; i<5; i++){
-        console.log("you are in game $(i) out of 5");
-        playRound();
+        console.log("you are in game " + i + " out of 5");
+        playRound(playerSelection, computerSelection);
 
     }
 }
 
- const playerSelection = "rock";
- const computerSelection = getComputerChoice();
- console.log(playRound(playerSelection, computerSelection));
+let wins = 0;
+let losses = 0;
+let ties = 0;
+const playerSelection = prompt();
+const computerSelection = getComputerChoice();
+console.log(game());
+console.log("Wins="+wins);
+console.log("Losses="+losses);
+console.log("Ties="+ties);
