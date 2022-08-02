@@ -40,11 +40,16 @@ function playRound(playerSelection, computerSelection){
                 return "You Win! " + playerSelection + " beats " + computerSelection;}
 }
 
+function player_Selection(){
+    let crack = prompt("Enter option here").charAt(0);
+    if(crack)
+}
+
 
 game = () => {
     for (let i=1; i<=5; i++){
         console.log("you are in game " + i + " out of 5");
-        const playerSelection = prompt("Enter your choice");
+        const playerSelection = player_Selection();
         const computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection));
 
@@ -55,7 +60,8 @@ let wins = 0;
 let losses = 0;
 let ties = 0;
 
-game();
+player_Selection();
+/*game();*/
 console.log("Wins="+wins);
 console.log("Losses="+losses);
 console.log("Ties="+ties);
