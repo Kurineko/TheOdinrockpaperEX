@@ -42,9 +42,11 @@ function playRound(playerSelection, computerSelection){
 
 
 game = () => {
-    for (let i=0; i<5; i++){
+    for (let i=1; i<=5; i++){
         console.log("you are in game " + i + " out of 5");
-        playRound(playerSelection, computerSelection);
+        const playerSelection = prompt("Enter your choice");
+        const computerSelection = getComputerChoice();
+        console.log(playRound(playerSelection, computerSelection));
 
     }
 }
@@ -52,9 +54,8 @@ game = () => {
 let wins = 0;
 let losses = 0;
 let ties = 0;
-const playerSelection = prompt();
-const computerSelection = getComputerChoice();
-console.log(game());
+
+game();
 console.log("Wins="+wins);
 console.log("Losses="+losses);
 console.log("Ties="+ties);
