@@ -29,3 +29,13 @@ function playRound(playerSelection, computerSelection){
         return "You Lose! Paper beats Rock";
     }else return "biscuts"
 }
+
+game => () {
+    for (let i=0; i<5; i++){
+
+    }
+}
+
+ const playerSelection = "rock";
+ const computerSelection = getComputerChoice();
+ console.log(playRound(playerSelection, computerSelection));
