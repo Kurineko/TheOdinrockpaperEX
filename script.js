@@ -23,4 +23,9 @@ function getComputerChoice(){
             break;
     }
 } 
-console.log(getComputerChoice())
+
+function playRound(playerSelection, computerSelection){
+    if(playerSelection==computerSelection){
+        return "You Lose! Paper beats Rock";
+    }else return "biscuts"
+}
