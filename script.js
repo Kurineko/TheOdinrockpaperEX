@@ -42,7 +42,23 @@ function playRound(playerSelection, computerSelection){
 
 function player_Selection(){
     let crack = prompt("Enter option here").charAt(0);
-    if(crack)
+    switch(true){
+        case crack==("R"||"r"):
+            return "rock";
+            break;
+            
+        case crack==("S"||"s"):
+            return "scissors";
+            break;
+
+        case crack==("P"||"p"):
+            return "paper";
+            break;
+
+        default:
+            alert("Unvalid selection, choose rock paper or scissor");
+            break;
+    }
 }
 
 
@@ -60,8 +76,7 @@ let wins = 0;
 let losses = 0;
 let ties = 0;
 
-player_Selection();
-/*game();*/
+game();
 console.log("Wins="+wins);
 console.log("Losses="+losses);
 console.log("Ties="+ties);
