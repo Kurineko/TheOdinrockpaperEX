@@ -55,10 +55,10 @@ function player_Selection(){
             return "paper";
             break;
 
-        /*default:
+        default:
             alert("Unvalid selection, choose rock paper or scissors");
             return player_Selection();
-            break;*/
+            break;
     }
 }
 
